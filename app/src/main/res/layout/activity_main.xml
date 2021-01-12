@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/img_Image1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="Imagen1" />
+
+    <ProgressBar
+        android:id="@+id/pbar_progress1"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_image1"
+        app:layout_constraintEnd_toEndOf="@+id/iv_image1"
+        app:layout_constraintStart_toStartOf="@+id/iv_image1"
+        app:layout_constraintTop_toTopOf="@+id/iv_image1"
+        />
+
+    <ImageView
+        android:id="@+id/iv_image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_image1"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/imagen2"/>
+
+    <ImageView
+        android:id="@+id/iv_image3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/iv_image1"
+        app:layout_constraintTop_toBottomOf="@+id/iv_image1"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/imagen3"/>
+
+    <ImageView
+        android:id="@+id/iv_image4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_image2"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/imagen4"/>
+
+    <ProgressBar
+        android:id="@+id/pbar_progress2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_image2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_image2"
+        app:layout_constraintStart_toStartOf="@+id/iv_image2"
+        app:layout_constraintTop_toTopOf="@+id/iv_image2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_image3"
+        app:layout_constraintEnd_toEndOf="@+id/iv_image3"
+        app:layout_constraintStart_toStartOf="@+id/iv_image3"
+        app:layout_constraintTop_toTopOf="@+id/iv_image3" />
+
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_image4"
+        app:layout_constraintEnd_toEndOf="@+id/iv_image4"
+        app:layout_constraintStart_toStartOf="@+id/iv_image4"
+        app:layout_constraintTop_toTopOf="@+id/iv_image4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
