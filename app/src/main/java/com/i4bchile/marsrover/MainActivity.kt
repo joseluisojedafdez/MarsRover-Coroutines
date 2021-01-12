@@ -35,9 +35,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
-
-        marsViewModel.loadImages().observe(this, {
+        binding.pbarProgress2.visibility=View.GONE
+        binding.progressBar3.visibility=View.GONE
+        binding.progressBar4.visibility=View.GONE
+        marsViewModel.getImage1().observe(this, {
             updateView(it)
+        })
+        marsViewModel.getImage2().observe(this, {
+            updateView2(it)
+        })
+        marsViewModel.getImage3().observe(this, {
+            updateView3(it)
+        })
+        marsViewModel.getImage4().observe(this, {
+            updateView4(it)
         })
         setContentView(binding.root)
     }
@@ -45,6 +56,21 @@ class MainActivity : AppCompatActivity() {
     private fun updateView(it: Bitmap?) {
         binding.ivImage1.setImageBitmap(it)
         binding.pbarProgress1.visibility = View.GONE
+        binding.pbarProgress2.visibility=View.VISIBLE
+    }
+    private fun updateView2(it: Bitmap?) {
+        binding.ivImage2.setImageBitmap(it)
+        binding.pbarProgress2.visibility = View.GONE
+        binding.progressBar3.visibility=View.VISIBLE
+    }
+    private fun updateView3(it: Bitmap?) {
+        binding.ivImage3.setImageBitmap(it)
+        binding.progressBar3.visibility = View.GONE
+        binding.progressBar4.visibility=View.VISIBLE
+    }
+    private fun updateView4(it: Bitmap?) {
+        binding.ivImage4.setImageBitmap(it)
+        binding.progressBar4.visibility = View.GONE
     }
 
 }
