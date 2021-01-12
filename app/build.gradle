@@ -53,8 +53,10 @@ dependencies {
     implementation "androidx.core:core:$core_version"
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.activity:activity-ktx:1.1.0"
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
-
+    //Corutinas
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
 
 }
