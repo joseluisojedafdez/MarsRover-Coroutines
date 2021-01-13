@@ -26,6 +26,8 @@ class MarsViewModel : ViewModel() {
     fun loadImages() {
         //Generamos una coroutine que va a buscar la función download a la clase Repository() y evalúa la respuesta (success o error)
         viewModelScope.launch {
+
+            Log.d("ViewMOdel", "loadImages: lanzando la corutina")
             for (i in 0..3) {
                 when (val download = repository.download(urlList[i])) {
                     //Si es success actualiza el valor del LiveData

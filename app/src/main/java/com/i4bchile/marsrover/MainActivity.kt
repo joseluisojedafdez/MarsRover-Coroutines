@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         binding.pbarProgress2.visibility=View.GONE
         binding.progressBar3.visibility=View.GONE
         binding.progressBar4.visibility=View.GONE
+        marsViewModel.loadImages()
         marsViewModel.getImage1().observe(this, {
             updateView(it)
         })

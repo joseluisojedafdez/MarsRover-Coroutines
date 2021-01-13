@@ -2,6 +2,7 @@ package com.i4bchile.marsrover
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.net.URL
@@ -23,10 +24,13 @@ class Repository {
             val bmp: Bitmap?
             val inputStream = URL(url).openStream()
             bmp = BitmapFactory.decodeStream(inputStream)
+            Log.d("Download", "download: success: $url")
             Result.Success(bmp)
+
         } catch (e: Exception) {
 
             //En caso de que hubiera un error en la descarga
+            Log.d("Download", "download: failure $e ")
             e.printStackTrace()
             Result.Error(e) } }
 
